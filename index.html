@@ -1,0 +1,67 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  </head>
+   
+  <body>
+
+    <div class="middlecontainer header">
+      
+      <h3>Markdown Builder v1.0.0</h3>
+      <h6>By WillDev12 on <a href="https://github.com/WillDev12/Readme-Maker">Github</a></h6>
+      
+      <a href="https://github.com/WillDev12/Readme-Builder/fork">
+        <img src="https://img.shields.io/github/forks/WillDev12/Readme-Builder?style=social"></a>
+      <a href="https://github.com/WillDev12/Readme-Builder/stargazers">
+        <img src="https://img.shields.io/github/stars/WillDev12/Readme-Builder?style=social"></a>
+      
+    </div>
+      
+    <div class="container header" style="float:left;">
+      
+      <h3 style="text-align:center;">Toolbox</h3>
+      <br>
+      
+      <button class="button buttontop" onclick="addHeader()">Header</button>
+      <button class="button" onclick="addImageHeader()">Image Header</button>
+      <button class="button" onclick="addTitle()">Title</button>
+      <button class="button" onclick="addParagraph()">Paragraph</button>
+      <button class="button" onclick="addDivision()">Division</button>
+      <button class="button" onclick="addTable()">Table</button>
+      <button class="button" onclick="addImage()">Image</button>
+      <button class="button" onclick="addBreak()">Line break</button>
+      <button class="button" onclick="addLink()">Link</button> 
+      <button class="button buttonbottom redbutton" onclick="clearText()">Clear all code</button>
+      
+    </div>
+    
+    <div class="container secondbox" style="float:right;text-align:left;">
+      
+      <div id="source" class="tabcontent" style="height:100%">
+        
+        <textarea class="codebox" id="textarea"><h1>Welcome!</h1>&#13;&#10;<h3>Here is a preview of your code</h3></textarea>
+        
+      </div>
+      
+      <div id="preview" class="tabcontent" style="text-align:none;">
+        
+        <md-block id="previewbox">
+        </md-block>
+        
+      </div>
+      
+    </div>
+    
+    <div class="container" style="float:left;">
+      
+      <h3 style="text-align:center;">Export</h3>
+      
+      <button class="button exportbutton" onclick="copy()">Copy to clipboard</button>
+      
+    </div>
+    
+  </body>
+  
+</html>
