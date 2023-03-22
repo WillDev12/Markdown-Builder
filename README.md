@@ -1,4 +1,4 @@
 # Markdown-Builder
-An advanced Github readme generator
+A not so advanced Github readme generator
 
 REPO UNDER CONSTRUCTION, PLEASE STAND BY
