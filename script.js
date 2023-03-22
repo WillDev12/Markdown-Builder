@@ -10,13 +10,13 @@ function addTable() {document.getElementById('textarea').value += '\r\n' + '\r\n
 
 function addTitle() {if (document.getElementById('textarea').value == "") {document.getElementById('textarea').value += "<h2>Your text here</h2>";} else {document.getElementById('textarea').value += '\r\n\r\n<h2>Title text here</h2>';}}
 
-function addParagraph() {document.getElementById('textarea').value += "\r\n\r\n<p>Here is your paragraph.  Text will automatically be wrapped when put in this form.  Markdown paragraphs are powerful because they have so many text editing options.</p>";}
+function addParagraph() {document.getElementById('textarea').value += "\r\n\r\n<p>Here is your paragraph.  Text will automatically be wrapped when put in this form.  Markdown paragraphs are powerful because they have so many text editing options.</p>"}
 
-function addBreak() {document.getElementById('textarea').value += "\r\n\r\n<br>";}
+function addBreak() {document.getElementById('textarea').value += "\r\n\r\n<br>"}
 
-function clearText() {document.getElementById('textarea').value = "";}
+function clearText() {document.getElementById('textarea').value = ""}
 
-function addLink() {document.getElementById('textarea').value += '<a href="[LINK HERE]">[TEXT HERE]</a>';}
+function addLink() {document.getElementById('textarea').value += '<a href="[LINK HERE]">[TEXT HERE]</a>'}
 
 function addImage() {if (document.getElementById('textarea').value == "") {document.getElementById('textarea').value += '<img src="[IMAGE LINK]">';} else {document.getElementById('textarea').value += '\r\n\r\n<img src="[IMAGE LINK]">';}}
 
