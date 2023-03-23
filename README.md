@@ -1,4 +1,4 @@
-<p align="center"><img src="https://plugins.jetbrains.com/files/18897/166369/icon/pluginIcon.png" width="400" height="200"></p>
+<p align="center"><img src="https://cdn1.iconfinder.com/data/icons/logos-and-brands-3/512/205_Markdown_logo_logos-512.png" width="400" height="350"></p>
 
 <h1 align="center">Markdown Builder v1.0.0</h1>
 
@@ -24,3 +24,8 @@
 <br>
 
 <h1>Like content like this?</h1>
+
+Check out my [profile](https://github.com/WillDev12) or share it! (It means a lot to me)
+```
+https://github.com/WillDev12
+```
