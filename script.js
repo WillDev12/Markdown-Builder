@@ -21,3 +21,32 @@ function addImage() {if (document.getElementById('textarea').value == "") {docum
 function addCodeBox() {if (document.getElementById('textarea').value == "") {document.getElementById('textarea').value += "``` [LANGUAGE NAME]\r\n\r\n```";} else {document.getElementById('textarea').value += "\r\n\r\n``` [LANGUAGE NAME]\r\n\r\n```";}}
 
 function copy() {navigator.clipboard.writeText(document.getElementById('textarea').value);}
+
+function addDetailTag() {
+    if (document.getElementById('textarea').value == "") {
+        document.getElementById('textarea').value += "<details>\r\n<summary>Click to expand</summary>\r\n\r\n</details>";
+    } else {
+        document.getElementById('textarea').value += "\r\n\r\n<details>\r\n<summary>Click to expand</summary>\r\n\r\n</details>";
+    }
+}
+
+$("textarea").keydown(function(e) {
+    if(e.keyCode === 9) { // tab was pressed
+        // get caret position/selection
+        var start = this.selectionStart;
+            end = this.selectionEnd;
+
+        var $this = $(this);
+
+        // set textarea value to: text before caret + tab + text after caret
+        $this.val($this.val().substring(0, start)
+                    + "\t"
+                    + $this.val().substring(end));
+
+        // put caret at right position again
+        this.selectionStart = this.selectionEnd = start + 1;
+
+        // prevent the focus lose
+        return false;
+    }
+});
