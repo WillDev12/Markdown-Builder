@@ -21,3 +21,11 @@ function addImage() {if (document.getElementById('textarea').value == "") {docum
 function addCodeBox() {if (document.getElementById('textarea').value == "") {document.getElementById('textarea').value += "``` [LANGUAGE NAME]\r\n\r\n```";} else {document.getElementById('textarea').value += "\r\n\r\n``` [LANGUAGE NAME]\r\n\r\n```";}}
 
 function copy() {navigator.clipboard.writeText(document.getElementById('textarea').value);}
+
+function addDetailTag() {
+    if (document.getElementById('textarea').value == "") {
+        document.getElementById('textarea').value += "<details>\r\n<summary>Click to expand</summary>\r\n\r\n</details>";
+    } else {
+        document.getElementById('textarea').value += "\r\n\r\n<details>\r\n<summary>Click to expand</summary>\r\n\r\n</details>";
+    }
+}
