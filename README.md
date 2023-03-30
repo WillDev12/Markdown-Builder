@@ -26,6 +26,8 @@
 <h1>Like content like this?</h1>
 
 Check out my [profile](https://github.com/WillDev12) or share it! (It means a lot to me)
+Also huge thanks to my other contributors!
 ```
 https://github.com/WillDev12
+https://github.com/kztera
 ```
