@@ -1,8 +1,10 @@
 <html>
   
   <head>
+    
     <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://willdev12.github.io/Markdown-Builder/css.css">
+    
   </head>
    
   <body>
@@ -35,23 +37,23 @@
       <button class="button" onclick="addBreak()">Line break</button>
       <button class="button" onclick="addLink()">Link</button> 
       <button class="button" onclick="addDetailTag()">Detail tag</button>
-      <button class="button greenbutton" onclick="preview()">Preview</button>
       <button class="button buttonbottom redbutton" onclick="clearText()">Clear all code</button>
       
     </div>
     
-    <div class="container secondbox" style="float:right;text-align:left;">
+    <div class="container secondbox" style="float:right;text-align:left;position:relative;">
       
-      <div id="source" class="tabcontent" style="height:100%">
+      <button class="viewbutton" onclick="changeView()">change view</button>
+      
+      <div id="source" class="tabcontent" style="height:100%;position:relative;margin-top:30px;">
         
         <textarea class="codebox" id="textarea"><h1>Welcome!</h1>&#13;&#10;<h3>Here is a preview of your code</h3></textarea>
         
       </div>
       
-      <div id="preview" class="tabcontent" style="text-align:none;">
+      <div id="preview" class="tabcontent" style="text-align:none;margin-top:30px;margin-left:20px;">
         
-        <md-block id="previewbox">
-        </md-block>
+        
         
       </div>
       
@@ -64,6 +66,7 @@
       <button class="button exportbutton" onclick="copy()">Copy to clipboard</button>
       
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://willdev12.github.io/Markdown-Builder/script.js"></script>
