@@ -28,11 +28,6 @@ input:hover{
   border-bottom: 2px solid rgba(46, 204, 113);
   
 }
-.codebox:hover{
-  
-  border-left: solid rgba(46, 204, 113);
-  
-}
 
 .header,.container {
   
@@ -80,7 +75,6 @@ input:hover{
   
   border-radius:2px;
   border:none;
-  border-left:4px solid rgba(10,10,10);
   background-color: rgba(20,20,20);
   text-align:left;
   padding-left:20px;
@@ -90,41 +84,8 @@ input:hover{
   width:100%;
   color:white;
   outline:none;
-  transition:0.3s;
   resize:none;
-  
-}
-
-.viewbutton {
-  
-  border:none;
-  border-radius:3px;
-  width:100px;
-  height:35px;
-  margin:10px;
-  box-shadow:0 0 8px 0 rgba(0,0,0,0.9);
-  color:white;
-  transition:all 0.2s;
-  background-color:rgba(87,66,154);
-  
-}
-
-.viewbutton:hover {
-  
-  box-shadow: 0 0 10px 0 rgba(0,0,0, 0.9);
-  background-color:rgba(98,81,151);
-  
-}
-
-.viewbutton:before {
-  
-  background-color:rgba(87,66,154);
-  
-}
-
-.viewbutton:active {
-  
-  background-color:rgba(68,49,127);
+  position:relative;
   
 }
 
@@ -193,18 +154,37 @@ input:hover{
   
 }
 
+.viewbutton {
+
+  user-select: none;
+  width: 90px;
+  height: 23px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: 0.2s all;
+  opacity: 0.1;
+  border-radius: 5px;
+  font-size: 11px;
+  background-color: rgba(30,30,30);
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  
+}
+
+.viewbutton:hover {
+  
+  opacity: 1;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+  
+}
+
+.viewbutton:active {
+  
+  background-color: rgba(35,35,35);
+  transform: scale(0.98);
+  
+}
+
 /* 112, 223, 60 green */
-
-.greenbutton {
-  
-  background-color: rgba(112, 223, 60);
-  transition: all 0.2s;
-  
-}
-
-.greenbutton:hover {
-  
-  background-color: rgba(102, 213, 50, 0.856);
-  transform:scale(1.01)
-  
-}
