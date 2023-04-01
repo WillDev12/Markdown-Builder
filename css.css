@@ -194,3 +194,17 @@ input:hover{
 }
 
 /* 112, 223, 60 green */
+
+.greenbutton {
+  
+  background-color: rgba(112, 223, 60);
+  transition: all 0.2s;
+  
+}
+
+.greenbutton:hover {
+  
+  background-color: rgba(102, 213, 50, 0.856);
+  transform:scale(1.01)
+  
+}
