@@ -3,7 +3,8 @@
 <h1 align="center">Markdown Builder v1.0.0</h1>
 
 <p align="center">
-<img src="https://img.shields.io/github/followers/WillDev12?label=follow%20my%20github&logo=github&style=for-the-badge">
+<a href="https://github.com/WillDev12">
+<img src="https://img.shields.io/github/followers/WillDev12?label=follow%20my%20github&logo=github&style=for-the-badge"></a>
 <img src="https://img.shields.io/github/stars/WillDev12/Markdown-Builder?style=for-the-badge">
 <img src="https://img.shields.io/github/forks/WillDev12/Markdown-Builder?style=for-the-badge">
 <img src="https://img.shields.io/github/watchers/WillDev12/Markdown-Builder?style=for-the-badge">
