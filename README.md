@@ -27,7 +27,7 @@
 <h2>Changelog</h2>
 
 ```
-Added view button
+Cleared up via prettier
 ```
 
 <h1>Like content like this?</h1>
