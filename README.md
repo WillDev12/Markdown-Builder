@@ -34,6 +34,7 @@ Added view button
 
 Check out my [profile](https://github.com/WillDev12) or share it! (It means a lot to me)<br>
 Also huge thanks to my other contributors!
+
 ```
 https://github.com/WillDev12
 https://github.com/kztera

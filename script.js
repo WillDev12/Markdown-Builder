@@ -110,24 +110,18 @@ $("textarea").keydown(function (e) {
     }
 });
 
-
 function changeView() {
-  
     if (viewCheck == true) {
-      
-      var markdownText = document.getElementById('textarea').value;
-      document.getElementById('preview').innerHTML = marked.parse(markdownText);
-      
-      document.getElementById('source').style.display = "none";
-      document.getElementById('preview').style.display = "block";
-      
-    } else {
-      
-      document.getElementById('preview').style.display = "none";
-      document.getElementById('source').style.display = "block";
-      
-    }
-  
-  viewCheck = !viewCheck;
+        var markdownText = document.getElementById("textarea").value;
+        document.getElementById("preview").innerHTML =
+            marked.parse(markdownText);
 
+        document.getElementById("source").style.display = "none";
+        document.getElementById("preview").style.display = "block";
+    } else {
+        document.getElementById("preview").style.display = "none";
+        document.getElementById("source").style.display = "block";
+    }
+
+    viewCheck = !viewCheck;
 }
