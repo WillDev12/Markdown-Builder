@@ -1,0 +1,99 @@
+/*
+  Styling for output menu interaction
+*/
+
+.output h1,
+h2 {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #d8dee4;
+}
+
+.output {
+  color: #1f2328;
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 1rem;
+}
+
+.output a {
+  text-decoration: none;
+  color: #0c6bda;
+}
+
+.output a:hover {
+  text-decoration: underline;
+}
+
+.output p {
+  font-size: 1.1rem;
+}
+
+.output blockquote {
+  border-left: 4px solid #d8dee4;
+  padding-left: 1rem;
+}
+
+table {
+  border: solid 2px #d8dee4;
+  margin: none;
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #f6f8fa;
+}
+
+td,
+th {
+  padding: 0.6rem;
+  border: solid 2px #d8dee4;
+}
+
+.output {
+  user-select: none;
+}
+
+.output
+  :not(
+    div,
+    strong,
+    blockquote,
+    a,
+    table,
+    tr,
+    th,
+    td,
+    em,
+    button,
+    code,
+    li
+  ):hover {
+  border: solid 2px #0d6efd;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.output th:hover,
+td:hover {
+  color: #0d6efd;
+}
+
+.output code {
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.output div {
+  background-color: black !important;
+}
+
+.output pre:has(code),
+.output p:has(code) {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.4rem !important;
+  padding: 0.6rem;
+}
+
+.output code {
+  font-size: 0.7rem;
+}

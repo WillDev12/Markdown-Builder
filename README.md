@@ -27,7 +27,22 @@
 <h2>Changelog</h2>
 
 ```
-Cleared up via prettier
+Added:
+    - Completely new UI
+    - Easier user compatability
+    - Draggable items
+    - Text editing on click
+    - Typography customization
+    - Blockquotes
+    - Lists
+    - Updated tables
+    - Script organization (backend)
+    - Item insertion widgets
+Removed:
+    - Code preview
+    - Some unneeded features
+Patched:
+    - Ui stretching
 ```
 
 <h1>Like content like this?</h1>

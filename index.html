@@ -1,97 +1,199 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css" />
-        <link
-            rel="stylesheet"
-            href="https://willdev12.github.io/Markdown-Builder/css.css"
-        />
-        <title>Markdown Builder</title>
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="https://img.icons8.com/color/512/markdown.png"
-        />
-    </head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="description" content="A simple markdown lang generator with little code editing and a cool new ui">
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/93289932?v=4&size=40">
+    <title>Markdown Builder -- Generate code in a few clicks</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.3/marked.min.js" integrity="sha512-lYRvlgmxv7o+vp/Gmo3p4qLML4csV0loGFy8cP2vpMSwV4F65BTq6LUZyq5zlV5s/LB0KkdGhd/tnMCmjWardA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <body>
-        <div class="middlecontainer header">
-            <h3>Markdown Builder v1.0.0</h3>
-            <h6>
-                By WillDev12 on
-                <a href="https://github.com/WillDev12/Markdown-Builder"
-                    >Github</a
-                >
-            </h6>
+    <!-- Styling -->
 
-            <a href="https://github.com/WillDev12/Readme-Builder/fork">
-                <img
-                    src="https://img.shields.io/github/forks/WillDev12/Readme-Builder?style=social"
-            /></a>
-            <a href="https://github.com/WillDev12/Readme-Builder/stargazers">
-                <img
-                    src="https://img.shields.io/github/stars/WillDev12/Readme-Builder?style=social"
-            /></a>
+    <link rel="stylesheet" href="./styling/index.css">
+    <link rel="stylesheet" href="./styling/ui.css">
+    <link rel="stylesheet" href="./styling/output.css">
+    <link rel="stylesheet" href="./styling/dashboard.css">
+
+  </head>
+  <body>
+    <nav>
+      <img src="https://avatars.githubusercontent.com/u/93289932?s=96&v=4" class="fa-spin" name="avatar">
+      <button>Github</button>
+      <button>Support</button>
+      <button>Follow</button>
+      <button name="export">Generate</button>
+      <button id="gitbtn">
+        <img src="https://img.shields.io/github/stars/WillDev12/Readme-Builder?style=social" name="badge">
+      </button>
+    </nav>
+    <div class="body-main">
+      <div class="sidebar">
+        <button id="textbtn">Text</button>
+        <button id="imgbtn">Image</button>
+        <button id="typobtn">Typography</button>
+        <button id="synbtn">Syntax</button>
+      </div>
+      <div class="container">
+        <div class="output"></div>
+      </div>
+    </div>
+      <div class="bottom">
+        <div class="info hidden" id="changeText">
+          <span>&times;</span>
+          <h4>Edit text</h4>
+          <div class="col">
+            <label for="text">Text</label>
+            <input type="text" id="replacement" autocomplete="off" title="\n for indent"> 
+          </div>
+          <button id="textupdate">Update</button>
         </div>
-
-        <div class="container header" style="float: left">
-            <h3 style="text-align: center">Toolbox</h3>
-            <br />
-
-            <button class="button buttontop" onclick="addHeader()">
-                Header
-            </button>
-            <button class="button" onclick="addImageHeader()">
-                Image Header
-            </button>
-            <button class="button" onclick="addTitle()">Title</button>
-            <button class="button" onclick="addParagraph()">Paragraph</button>
-            <button class="button" onclick="addCodeBox()">Code</button>
-            <button class="button" onclick="addDivision()">Division</button>
-            <button class="button" onclick="addTable()">Table</button>
-            <button class="button" onclick="addImage()">Image</button>
-            <button class="button" onclick="addBreak()">Line break</button>
-            <button class="button" onclick="addLink()">Link</button>
-            <button class="button" onclick="addDetailTag()">Detail tag</button>
-            <button class="button buttonbottom redbutton" onclick="clearText()">
-                Clear all code
-            </button>
+        <div class="info hidden" id="newText">
+          <span>&times;</span>
+          <h4>Add Text</h4>
+          <select name="textType" id="textType">
+            <option value="h1">H1</option>
+            <option value="h2">H2</option>
+            <option value="h3">H3</option>
+            <option value="h4">H4</option>
+            <option value="h5">H5</option>
+            <option value="h6">H6</option>
+            <option value="p">p</option>
+          </select>
+          <div class="col">
+            <label for="text">Text</label>
+            <input type="text" id="text" autocomplete="off" title="\n for indent"> 
+          </div>
+          <button id="insertbtn">Insert</button>
         </div>
-
-        <div
-            class="container secondbox"
-            style="float: right; text-align: left; position: relative"
-        >
-            <button class="viewbutton" onclick="changeView()">
-                change view
-            </button>
-
-            <div
-                id="source"
-                class="tabcontent"
-                style="height: 100%; position: relative; margin-top: 30px"
-            >
-                <textarea class="codebox" id="textarea">
-<h1>Welcome!</h1>&#13;&#10;<h3>Here is a preview of your code</h3></textarea
-                >
+        <div class="info hidden" id="changeImg">
+          <span>&times;</span>
+          <h4>Edit image</h4>
+          <div class="col">
+            <label for="text">Src</label>
+            <input type="text" id="replacementsrc" autocomplete="off" title="Image url"> 
+          </div>
+          <button id="imgupdate">Update</button>
+        </div>
+        <div class="info hidden" id="addImg">
+          <span>&times;</span>
+          <h4>Add image</h4>
+          <div class="col" id="imgcol">
+            <div class="col" id="srcwrapper">
+              <label for="text">Src</label>
+              <input type="text" id="newsrc" autocomplete="off" title="Image url">
             </div>
-
-            <div
-                id="preview"
-                class="tabcontent"
-                style="text-align: none; margin-top: 30px; margin-left: 20px"
-            ></div>
+          </div>
+          <div class="flex">
+            <button id="addimg">Insert</button>
+          </div>
         </div>
-
-        <div class="container" style="float: left; width: 100%">
-            <h3 style="text-align: center">Export</h3>
-
-            <button class="button exportbutton" onclick="copy()">
-                Copy to clipboard
-            </button>
+        <div class="info hidden" id="Typs">
+          <span>&times;</span>
+          <h4>Bold</h4>
+          <div class="col">
+            <div class="col">
+              <label for="text">Html</label>
+              <textarea type="text" id="slc" autocomplete="off" title="Image url"></textarea>
+            </div>
+            <div class="flex">
+              <button class="mr" name="sav">Save</button>
+              <button name="sel">Bold selected</button>
+            </div>
+          </div>
         </div>
+        <div class="info hidden" id="Typ">
+          <span>&times;</span>
+          <h4>Typography</h4>
+          <div class="col">
+            <sup class="hidden">Select an element to continue</sup>
+            <button>Bold</button>
+            <button>Italic</button>
+            <button>Underline</button>
+            <button>Clear formatting</button>
+          </div>
+        </div>
+        <div class="info hidden" id="synbox">
+          <span>&times;</span>
+          <h4>Syntax</h4>
+          <div class="col">
+            <button>Table</button>
+            <button>Codebox</button>
+            <button>Select tag</button>
+            <button>List</button>
+            <button>Blockquote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="model">
+      <div class="modelbody">
+        <span>&times;</span>
+        <div id="newCode" class="">
+          <h2>Insert code</h2>
+          <div class="flex">
+            <textarea id="code" class="language-css" placeholder="Your code here..."></textarea>
+          </div>
+          <div class="flex">
+            <button>Insert</button>
+          </div>
+        </div>
+        <div id="newTable" class="hidden">
+          <h2>New table</h2>
+          <div class="flex">
+            <table id="modeltable">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div id="tbox" class="mt btnbox">
+            <button>Insert</button>
+            <button>Add row</button>
+            <button id="rrbtn">Remove row</button>
+            <button>Add column</button>
+            <button id="rcbtn">Remove column</button>
+          </div>
+        </div>
+        <div id="newList" class="hidden">
+          <h2>Insert list</h2>
+          <ul id="selectul">
+            <li>
+              <input type="text">
+            </li>
+          </ul>
+          <div class="flex">
+            <button>Add row</button>
+            <button>Remove row</button>
+          </div>
+          <button>Insert</button>
+        </div>
+        <div id="newBlock" class="hidden">
+          <h2>Insert blockquote</h2>
+          <div class="flex">
+            <label for="text" class="label">Text here</label>
+            <input type="text" id="quotetext">
+          </div>
+          <button>Insert</button>
+        </div>
+      </div>
+    </div>
+    <div class="feedback">
+      <div>
+        <p></p>
+        <span>&times;</span>
+      </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://willdev12.github.io/Markdown-Builder/script.js"></script>
-    </body>
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/ui/buttons.js"></script>
+    <script src="./scripts/ui/menus.js"></script>
+    <script src="./scripts/ui/output.js"></script>
+    <script src="./scripts/ui/popup.js"></script>
+
+  </body>
 </html>

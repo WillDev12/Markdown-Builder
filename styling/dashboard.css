@@ -1,0 +1,91 @@
+/*
+  Navigation buttons and overall layout
+*/
+
+nav {
+  display: flex;
+  padding: 1rem;
+}
+
+nav img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+nav img[name="badge"] {
+  width: 4rem;
+  height: 1.2rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+nav,
+.sidebar,
+.sidebar button:hover {
+  background-color: #dee2e6;
+}
+
+button {
+  user-select: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  width: 20rem;
+  padding: 0.6rem 0 0.6rem 0;
+  border: none;
+  background: #e9ecef;
+}
+
+.body-main {
+  background-color: #ced4da;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+nav * {
+  margin-right: 1rem;
+}
+
+nav button {
+  background: none;
+  border: none;
+  font-weight: 500;
+}
+
+nav button[name="export"] {
+  color: green;
+}
+
+nav button:hover {
+  color: #495057;
+}
+
+.container {
+  display: inline;
+  width: 100%;
+  padding: 1rem;
+  overflow-y: scroll;
+  flex: 1 1 auto;
+}
+
+.container div {
+  background-color: #e9ecef;
+  padding: 1rem;
+  width: auto;
+  border-radius: 0.4rem;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  border: 0;
+  width: fit-content;
+}

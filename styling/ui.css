@@ -1,0 +1,233 @@
+/*
+  Styling for menu widgets, model dialog, and buttons
+*/
+
+.info {
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.2);
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.info h4 {
+  line-height: 0.1rem;
+}
+
+.info span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.info input[type="text"],
+textarea {
+  background: none;
+  border-radius: 0.2rem;
+  border: solid 1px #6c757d;
+  outline: none;
+  padding: 0.1rem 0.3rem;
+  margin-bottom: 1rem;
+  height: 1.4rem;
+}
+
+#imgcol {
+  margin-bottom: 1rem;
+}
+
+#imgcol input {
+  margin-bottom: 0.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info label {
+  background-color: #e9ecef;
+  transform: translateY(0.14rem);
+  margin-left: 0.3rem;
+  padding: 0.1rem;
+  width: fit-content;
+  font-size: 0.8rem;
+  line-height: 0.2rem;
+}
+
+.info button,
+.modelbody button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.3rem 0 0.3rem 0;
+  border-radius: 0.3rem;
+  margin-bottom: 0.4rem;
+  width: 100%;
+}
+
+.info button:hover,
+.modelbody button:hover {
+  color: #dee2e6;
+}
+
+.secondarybtn {
+  background: none !important;
+  border: solid 1px #6c757d !important;
+  color: #6c757d !important;
+  font-weight: bold;
+  transition: 0.2s all;
+}
+
+.secondarybtn:hover {
+  background-color: #6c757d !important;
+  color: white !important;
+}
+
+.delete {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  z-index: 7;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #e9ecef;
+  border: 2px solid #0d6efd;
+  border-radius: 0.2rem;
+}
+
+#Typ button,
+#synbox button {
+  width: 12rem;
+}
+
+#Typ sup {
+  margin-bottom: 0.8rem;
+  line-height: 0;
+  color: red;
+}
+
+textarea {
+  resize: none;
+  width: auto;
+  height: 3.2rem;
+  padding-top: 0.3rem;
+}
+
+.model {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+}
+
+.modelbody {
+  margin: 1rem auto;
+  width: 60%;
+  border-radius: 0.6rem;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: white;
+  position: relative;
+  opacity: 0;
+  transition: 0.2s ease-out;
+}
+
+.modelbody span {
+  position: absolute;
+  right: 1rem;
+  top: 0.6rem;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.modelbody h2 {
+  border: none;
+}
+
+.modelbody span:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modelbody table {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.modelbody th,
+td {
+  padding-top: 1rem;
+}
+
+.btnbox {
+  display: flex;
+}
+
+.btnbox button {
+  margin-right: 0.2rem;
+}
+
+button:disabled,
+button[disabled],
+button[disabled]:hover {
+  cursor: not-allowed;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.feedback {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  background-color: white;
+  width: 60%;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.feedback div {
+  position: relative;
+}
+
+.feedback span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+#newCode textarea {
+  background: url(http://i.imgur.com/2cOaJ.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  border-color: #ccc;
+  font-family: monospace;
+  flex: auto;
+}
+
+#newList li {
+  margin-bottom: 0.2rem;
+}
+
+#newBlock input {
+  flex: 1;
+  margin-bottom: 2rem;
+  height: 1.4rem;
+  padding-left: 0.6rem;
+}
+
+#newBlock div {
+  position: relative;
+}
