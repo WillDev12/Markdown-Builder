@@ -1,6 +1,6 @@
 <p align="center"><img src="https://cdn1.iconfinder.com/data/icons/logos-and-brands-3/512/205_Markdown_logo_logos-512.png" width="400" height="350"></p>
 
-<h1 align="center">Markdown Builder v1.0.0</h1>
+<h1 align="center">Markdown Builder v1.5.0</h1>
 
 <p align="center">
 <a href="https://github.com/WillDev12">
